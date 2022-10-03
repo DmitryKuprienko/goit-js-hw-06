@@ -1,9 +1,11 @@
-// console.log(document);
-const navEL = document.querySelector(`.item`);
-// console.log(navEL);
+const itemELRef = document.querySelectorAll(".item");
+console.log(`Number of categories:`, itemELRef.length);
 
-const navItemEL = document.querySelectorAll(`.item`);
-// console.log(`Number of categories:`, navItemEL);
+// const h2Ref = document.querySelector("h2");
+// console.log("Category:", h2Ref.textContent);
 
-const allH2 = document.getElementsByClassName(`item-title`);
-console.log(allH2);
+const titleAndNumberOfElements = itemELRef.forEach(
+  (element) =>
+    console.log("Category:", element.querySelector("h2").textContent) ||
+    console.log("Element:", element.querySelector("ul").childElementCount)
+);
