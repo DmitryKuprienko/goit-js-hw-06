@@ -20,4 +20,4 @@ const liNewRef = ingredients
 
 // console.log(liNewRef);
 ulNewRef.innerHTML = liNewRef;
-console.log(ulNewRef);
+// console.log(ulNewRef);
