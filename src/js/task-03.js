@@ -12,27 +12,23 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-const list = document.querySelector(".gallery");
 
-let markupLi = "";
-images.forEach(({ url, alt }) => {
-  markupLi = images
+const listRef = document.querySelector(".gallery");
+
+let markupLi  = images
     .map(
       ({ url, alt }) =>
         `<li class="gallery__item"><img class="gallery__image" src="${url}" alt="${alt} "></li>`
     )
     .join("");
-    console.log(markupLi)
-});
 
+listRef.insertAdjacentHTML("afterbegin", markupLi);
+ 
+const widthImg = listRef.querySelectorAll(".gallery__image")
 
-list.insertAdjacentHTML("afterbegin", markupLi);
-
-const widthImg = list.querySelectorAll(".gallery__image")
 widthImg.forEach((img) =>
-img.width = 200 , 150
 
-
+img.width = 250 , 150
 );
 
 console.log(widthImg)
