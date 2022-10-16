@@ -28,7 +28,8 @@ const widthImg = listRef.querySelectorAll(".gallery__image")
 
 widthImg.forEach((img) =>
 
-img.width = 250 , 150
+img.width = 250 
+
 );
 
 console.log(widthImg)

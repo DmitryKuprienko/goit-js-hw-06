@@ -5,20 +5,17 @@ formRef.addEventListener("submit",hendleFormRefSubmit)
 
 function hendleFormRefSubmit(event){
      event.preventDefault()
-    const {email, password} = event.currentTarget.elements
+     
+    const {elements: {email, password}} = event.currentTarget;
+
     if (email.value ==="" || password.value ==="" ) {
        return alert("Помилка ! Поле Email або Password не заповненні!");
     
     } else {
-        const formData = new FormData(event.currentTarget)
+        const formData = {email:email.value,
+        password: password.value}
         console.log(formData)
-        formData.forEach( (value,name) => {
-          
-            return console.log({name,value})
-            })
-            
-            // const enteredData ={email: email.value, password: password.value,}
-            // console.log(enteredData)
+        
         }
 
      event.currentTarget.reset()
